@@ -16,7 +16,8 @@ class Game():
                             "right middle": 6, "middle right": 6, "6": 6,
                             "bottom left": 7, "bottom left corner": 7, "7": 7,
                             "bottom middle": 8, "middle bottom": 8, "8": 8,
-                            "bottom right": 9, "bottom right corner": 9, "9": 9
+                            "bottom right": 9, "bottom right corner": 9, "9": 9,
+                            '' : None,
         }
 
     def __str__(self):
@@ -48,19 +49,60 @@ class Game():
         #No matches
         return False
 
-    def place(self, sign, pos):
-        if (self.game_board[pos] == '-'):
-            self.game_board[pos] = sign
-            print(self)
-            return True
-        return False
-
-    def validate_move(self, sign, move):
-        if(move.lower() in self.valid_moves.keys()):
-            if(self.game_board[self.valid_moves[move.lower()]] == '-'):
-                self.place(sign, self.valid_moves[move.lower()])
+    def move(self, sign, pos):
+        # if (self.game_board[pos] == '-' and self._validate_move(pos)):
+        if self._validate_move(pos):
+            if self.game_board[self.valid_moves[pos]] == '-':
+                self.game_board[self.valid_moves[pos]] = sign
+                print(self)
                 return True
         return False
+
+    def _validate_move(self, move):
+        if(move.lower() in self.valid_moves.keys()):
+            if(self.game_board[self.valid_moves[move.lower()]] == '-'):
+                # self.move(sign, self.valid_moves[move.lower()])
+                return True
+        return False
+
+    def play(self, player1, player2):
+        print("Let's play tic-tac-toe! I'm Os, you're Xs!")
+        while not self.check_for_win():
+            p1move = ""
+            while (p1move == "" or (not player1.game.move(player1.sign, p1move))):
+                p1move = input("Player 1 turn: ")
+            player1.move(p1move)
+            if game.check_for_win():
+                print("Player 1 wins!")
+                break
+            p2move = ""
+            while (p2move == "" or (not player2.game.move(player2.sign, p2move))):
+                p2move = input("Player 2 turn: ")
+            player2.move(p2move)
+            if game.check_for_win():
+                print("Player 2 wins!")
+                break
+
+    def play_test(self, playerl, player2, p1moves, p2moves):
+        print("Let's play tic-tac-toe! I'm Os, you're Xs!")
+        i = 0
+        while not self.check_for_win():
+            p1move = p1moves[i]
+            while player1.game.move(player1.sign, p1move):
+                p1move = input("Player 1 turn: ")
+            player1.move(p1move)
+            if game.check_for_win():
+                print("Player 1 wins!")
+                break
+            p2move = p2moves[i]
+            while player2.game.move(player2.sign, p2move):
+                p2move = input("Player 2 turn: ")
+            player2.move(p2move)
+            if game.check_for_win():
+                print("Player 2 wins!")
+                break
+            i+=1
+
 
 
 class Player():
@@ -71,7 +113,7 @@ class Player():
         self.game = game
 
     def move(self, pos):
-        return self.game.validate_move(self.sign, pos)
+        return self.game.move(self.sign, pos)
 
 
 
@@ -83,17 +125,24 @@ print(game)
 player1 = Player('X', game)
 player2 = Player('O', game)
 
+game.play(player1, player2)
 
 game_over = False
-print("Let's play tic-tac-toe! I'm Os, you're Xs!")
+# print("Let's play tic-tac-toe! I'm Os, you're Xs!")
 
-while not game.check_for_win():
-    p1move = ""
-    while(p1move == "" or (not player1.game.validate_move(player1.sign, p1move))):
-        p1move = input("Player 1 turn: ")
-    player1.move(p1move)
-    p2move = ""
-    while(p2move == "" or (not player2.game.validate_move(player2.sign, p2move))):
-        p2move = input("Player 2 turn: ")
-    player2.move(p2move)
+# while not game.check_for_win():
+#     p1move = ""
+#     while(p1move == "" or (not player1.game.move(player1.sign, p1move))):
+#         p1move = input("Player 1 turn: ")
+#     player1.move(p1move)
+#     if game.check_for_win():
+#         print("Player 1 wins!")
+#         break
+#     p2move = ""
+#     while(p2move == "" or (not player2.game.move(player2.sign, p2move))):
+#         p2move = input("Player 2 turn: ")
+#     player2.move(p2move)
+#     if game.check_for_win():
+#         print("Player 2 wins!")
+#         break
 
