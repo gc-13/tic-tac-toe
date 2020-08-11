@@ -21,11 +21,19 @@ class Game():
         }
 
     def __str__(self):
+        """
+        prints the board and any current played spaces
+        """
         return self.game_board[1] + " | " + self.game_board[2] + " | " + self.game_board[3] + '\n' + \
                self.game_board[4] + " | " + self.game_board[5] + " | " + self.game_board[6] + '\n' + \
                self.game_board[7] + " | " + self.game_board[8] + " | " + self.game_board[9]
 
     def check_for_win(self):
+        """
+        Checks if there is 'three-in-a-row' of one sign on the board
+        Firt checks horizontal rows, then vertical columns, and finally the two diagonals
+        :return: True if 'three-in-a-row' of a sign is found, False otherwise
+        """
 
         # Check Horizontal Rows
         for i in [1, 4, 7]:
@@ -33,7 +41,7 @@ class Game():
             self.game_board[i] == self.game_board[i+1] and self.game_board[i] == self.game_board[i+2]):
                 return True
 
-        # Check Vertical Row
+        # Check Vertical Columns
         for i in [1,2,3]:
             if(self.game_board[i] != '-' and
             self.game_board[i] == self.game_board[i+3] and self.game_board[i] == self.game_board[i+6]):
@@ -50,6 +58,13 @@ class Game():
         return False
 
     def move(self, sign, pos):
+        """
+
+        :param sign: Sign (X or O) to be placed
+        :param pos: String Position of where to place the sign
+        :return: True if pos was valid, the space was open, and the
+         sign was succesfully placed, False otherwise
+        """
         # if (self.game_board[pos] == '-' and self._validate_move(pos)):
         if self._validate_move(pos):
             if self.game_board[self.valid_moves[pos]] == '-':
@@ -60,9 +75,14 @@ class Game():
         return False
 
     def _validate_move(self, move):
-        if(move.lower() in self.valid_moves.keys()):
-            if(self.game_board[self.valid_moves[move.lower()]] == '-'):
-                # self.move(sign, self.valid_moves[move.lower()])
+        """
+        Checks if the move is in the valid_moves dict and maps that to
+        the appropriate space in the game board dictionary
+        :param move: String move
+        :return: True if the move is in the dict and the space is open
+        """
+        if ((move.lower() in self.valid_moves.keys()) and
+            (self.game_board[self.valid_moves[move.lower()]] == '-')):
                 return True
         return False
 
@@ -76,6 +96,7 @@ class Game():
             if player1.game.check_for_win():
                 print("Player 1 wins!")
                 return player1
+
             p2move = ""
             while (p2move == "" or (not player2.game.move(player2.sign, p2move))):
                 p2move = input("Player 2 turn: ")
@@ -93,12 +114,16 @@ class Game():
                 print("Player 1 wins!")
                 return player1
 
+            if i == 4:
+                return None
+
             player2.move(p2moves[i])
             if player1.game.check_for_win():
                 print("Player 2 wins!")
                 return player2
 
-            i+=1
+            i += 1
+
 
 
 
@@ -111,18 +136,6 @@ class Player():
 
     def move(self, pos):
         return self.game.move(self.sign, pos)
-
-
-
-# 9 Functions to win the game!
-
-
-# game = Game()
-# player1 = Player('X', game)
-# player2 = Player('O', game)
-
-# game.play(player1, player2)
-
 
 
 
