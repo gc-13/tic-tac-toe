@@ -55,6 +55,7 @@ class Game():
             if self.game_board[self.valid_moves[pos]] == '-':
                 self.game_board[self.valid_moves[pos]] = sign
                 print(self)
+                print()
                 return True
         return False
 
@@ -72,35 +73,31 @@ class Game():
             while (p1move == "" or (not player1.game.move(player1.sign, p1move))):
                 p1move = input("Player 1 turn: ")
             player1.move(p1move)
-            if game.check_for_win():
+            if player1.game.check_for_win():
                 print("Player 1 wins!")
-                break
+                return player1
             p2move = ""
             while (p2move == "" or (not player2.game.move(player2.sign, p2move))):
                 p2move = input("Player 2 turn: ")
             player2.move(p2move)
-            if game.check_for_win():
+            if player1.game.check_for_win():
                 print("Player 2 wins!")
-                break
+                return player2
 
-    def play_test(self, playerl, player2, p1moves, p2moves):
+    def play_test(self, player1, player2, p1moves, p2moves):
         print("Let's play tic-tac-toe! I'm Os, you're Xs!")
         i = 0
         while not self.check_for_win():
-            p1move = p1moves[i]
-            while player1.game.move(player1.sign, p1move):
-                p1move = input("Player 1 turn: ")
-            player1.move(p1move)
-            if game.check_for_win():
+            player1.move(p1moves[i])
+            if player1.game.check_for_win():
                 print("Player 1 wins!")
-                break
-            p2move = p2moves[i]
-            while player2.game.move(player2.sign, p2move):
-                p2move = input("Player 2 turn: ")
-            player2.move(p2move)
-            if game.check_for_win():
+                return player1
+
+            player2.move(p2moves[i])
+            if player1.game.check_for_win():
                 print("Player 2 wins!")
-                break
+                return player2
+
             i+=1
 
 
@@ -120,29 +117,12 @@ class Player():
 # 9 Functions to win the game!
 
 
-game = Game()
-print(game)
-player1 = Player('X', game)
-player2 = Player('O', game)
+# game = Game()
+# player1 = Player('X', game)
+# player2 = Player('O', game)
 
-game.play(player1, player2)
+# game.play(player1, player2)
 
-game_over = False
-# print("Let's play tic-tac-toe! I'm Os, you're Xs!")
 
-# while not game.check_for_win():
-#     p1move = ""
-#     while(p1move == "" or (not player1.game.move(player1.sign, p1move))):
-#         p1move = input("Player 1 turn: ")
-#     player1.move(p1move)
-#     if game.check_for_win():
-#         print("Player 1 wins!")
-#         break
-#     p2move = ""
-#     while(p2move == "" or (not player2.game.move(player2.sign, p2move))):
-#         p2move = input("Player 2 turn: ")
-#     player2.move(p2move)
-#     if game.check_for_win():
-#         print("Player 2 wins!")
-#         break
+
 
