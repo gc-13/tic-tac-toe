@@ -121,5 +121,17 @@ class CvPTestCase(unittest.TestCase):
                          game1.game_board
                          )
 
+    def test_center_empty(self):
+        game1, computer1, player2 = self.onecompplayer_setup()
+        game1.game_board = {1: "-", 2: "-", 3: "-",
+                            4: "-", 5: "-", 6: "-",
+                            7: "-", 8: "-", 9: "-"}
+        computer1.auto_move()
+        self.assertEqual({1: "-", 2: "-", 3: "-",
+                          4: "-", 5: "X", 6: "-",
+                          7: "-", 8: "-", 9: "-"},
+                         game1.game_board
+                         )
+
 if __name__ == '__main__':
     unittest.main()

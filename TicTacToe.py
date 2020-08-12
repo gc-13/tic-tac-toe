@@ -173,10 +173,11 @@ class Computer(Player):
     def auto_move(self):
         print("beginning auto move")
         moved = False
-        while not moved:
-            moved = self.first_win()
-            moved = self.second_block()
-            break
+        moves = [self.first_win, self.second_block, self.fifth_center,]
+        for i in range(len(moves)):
+            moved = moves[i]()
+            if moved:
+                break
 
     def _get_three(self, indices):
         """
@@ -234,6 +235,13 @@ class Computer(Player):
                 print(self.game)
                 return True
 
+        return False
+
+    def fifth_center(self):
+
+        if self.playable(5):
+            self.move(5)
+            return True
         return False
 
 
