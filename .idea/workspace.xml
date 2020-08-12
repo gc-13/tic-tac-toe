@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ae1636d-00f0-4aa3-abd8-6b76b0c1d38a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/TicTacToe.py" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,20 +13,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TicTacToe.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="215" selection-start-line="215" selection-end-line="215" />
+            <state relative-caret-position="259">
+              <caret line="233" column="31" selection-start-line="233" selection-start-column="31" selection-end-line="233" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+            <state relative-caret-position="250">
+              <caret line="111" column="26" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#949#1227#0" />
@@ -34,6 +35,9 @@
                 <element signature="e#1637#2201#0" />
                 <element signature="e#2238#2779#0" />
                 <element signature="e#2824#3387#0" />
+                <element signature="e#3432#3994#0" />
+                <element signature="e#3933#4393#0" />
+                <element signature="e#4430#4890#0" />
               </folding>
             </state>
           </provider>
@@ -52,6 +56,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>validate</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -67,9 +72,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-15" />
-    <option name="y" value="-15" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1685" />
     <option name="width" value="2175" />
     <option name="height" value="2080" />
   </component>
@@ -165,47 +169,47 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 52m 51s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 28m 30s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 54m 08s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 30m 17s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 55m 09s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 30m 32s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 56m 52s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 31m 08s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 07m 56s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 31m 39s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 08m 25s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 31m 46s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 10m 09s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 35m 00s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 10m 19s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 36m 13s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 11m 18s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 36m 26s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 11m 36s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 36m 55s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <frame x="674" y="0" width="870" height="832" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11255693" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2016317" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42739725" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3572414" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -220,17 +224,10 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TicTacToe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="215" selection-start-line="215" selection-end-line="215" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+        <state relative-caret-position="250">
+          <caret line="111" column="26" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <element signature="e#949#1227#0" />
@@ -239,7 +236,17 @@
             <element signature="e#1637#2201#0" />
             <element signature="e#2238#2779#0" />
             <element signature="e#2824#3387#0" />
+            <element signature="e#3432#3994#0" />
+            <element signature="e#3933#4393#0" />
+            <element signature="e#4430#4890#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="233" column="31" selection-start-line="233" selection-start-column="31" selection-end-line="233" selection-end-column="31" />
         </state>
       </provider>
     </entry>

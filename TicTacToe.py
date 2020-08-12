@@ -154,8 +154,8 @@ class Player():
         self.sign = sign
         self.game = game
 
-    def taken(self, index):
-        if self.game.game_board[index] == self.sign:
+    def taken(self, sign, index):
+        if self.game.game_board[index] == sign:
             return True
         return False
 
@@ -172,7 +172,11 @@ class Computer(Player):
 
     def auto_move(self):
         print("beginning auto move")
-        self.first_win()
+        moved = False
+        while not moved:
+            moved = self.first_win()
+            moved = self.second_block()
+            break
 
     def _get_three(self, indices):
         """
@@ -186,12 +190,12 @@ class Computer(Player):
             if self.playable(i):
                 return i
 
-    def _oneplay_twotaken(self, indices):
+    def _oneplay_twotaken(self, sign, indices):
         """
         Checks if it is possible to get 'three-in-a-row' in this group
         :param indices: 3 indicies in the game_board, representing a row,
                         column, or diagonal
-        :return: True if there are two spaces taken by the computer and
+        :return: True if there are two spaces taken by the sign and
                 one that is open, False otherwise
         """
         playble = 0
@@ -199,7 +203,7 @@ class Computer(Player):
         for i in indices:
             if self.playable(i):
                 playble +=1
-            if self.taken(i):
+            if self.taken(sign, i):
                 taken +=1
         return (playble, taken) == (1,2)
 
@@ -208,10 +212,29 @@ class Computer(Player):
         for combo in [  [1,2,3], [4,5,6], [7,8,9],
                         [1,4,7], [2,5,8], [3,6,9],
                         [1,5,9], [3,5,7]]:
-            if self._oneplay_twotaken(combo):
+            if self._oneplay_twotaken(self.sign, combo):
                 self.move(self._get_three(combo))
                 return True
 
         return False
+
+    def second_block(self):
+        sign = ''
+        if self.sign == 'X':
+            sign = 'O'
+        else:
+            sign = 'X'
+        for combo in [  [1,2,3], [4,5,6], [7,8,9],
+                        [1,4,7], [2,5,8], [3,6,9],
+                        [1,5,9], [3,5,7]]:
+            if self._oneplay_twotaken(sign, combo):
+                print(self._get_three(combo))
+                self.move(self._get_three(combo))
+                print(self.game.check_for_win())
+                print(self.game)
+                return True
+
+        return False
+
 
 
