@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ae1636d-00f0-4aa3-abd8-6b76b0c1d38a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.py" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +16,7 @@
         <entry file="file://$PROJECT_DIR$/TicTacToe.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="138">
-              <caret line="211" column="49" selection-start-line="211" selection-start-column="49" selection-end-line="211" selection-end-column="49" />
+              <caret line="215" selection-start-line="215" selection-end-line="215" />
             </state>
           </provider>
         </entry>
@@ -26,10 +24,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-126">
-              <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            <state relative-caret-position="128">
+              <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#949#1227#0" />
+                <element signature="e#1278#1600#0" />
+                <element signature="e#1475#1640#0" />
+                <element signature="e#1637#2201#0" />
+                <element signature="e#2238#2779#0" />
+                <element signature="e#2824#3387#0" />
               </folding>
             </state>
           </provider>
@@ -161,24 +165,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 12m 17s.xml">
-      <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 48m 46s.xml">
-      <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 50m 16s.xml">
-      <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 50m 37s.xml">
-      <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 51m 28s.xml">
-      <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 52m 08s.xml">
-      <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 52m 51s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
@@ -189,6 +175,24 @@
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 56m 52s.xml">
+      <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 07m 56s.xml">
+      <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 08m 25s.xml">
+      <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 10m 09s.xml">
+      <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 10m 19s.xml">
+      <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 11m 18s.xml">
+      <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 14h 11m 36s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
   </component>
@@ -219,16 +223,22 @@
     <entry file="file://$PROJECT_DIR$/TicTacToe.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
-          <caret line="211" column="49" selection-start-line="211" selection-start-column="49" selection-end-line="211" selection-end-column="49" />
+          <caret line="215" selection-start-line="215" selection-end-line="215" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="128">
+          <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#949#1227#0" />
+            <element signature="e#1278#1600#0" />
+            <element signature="e#1475#1640#0" />
+            <element signature="e#1637#2201#0" />
+            <element signature="e#2238#2779#0" />
+            <element signature="e#2824#3387#0" />
           </folding>
         </state>
       </provider>
