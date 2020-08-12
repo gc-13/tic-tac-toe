@@ -8,15 +8,15 @@ class Game():
                            4:"-", 5:"-", 6:"-",
                            7:"-", 8:"-", 9:"-"}
         self.valid_moves = {
-                            "top left": 1, "top left corner" : 1, "1":1,
-                            "top middle": 2, "middle top": 2, "2": 2,
-                            "top right": 3, "top right corner": 3, "3": 3,
-                            "left middle": 4, "middle left": 4, "4": 4,
-                            "middle": 5, "mid": 5, "middle middle": 5,"5": 5,
-                            "right middle": 6, "middle right": 6, "6": 6,
-                            "bottom left": 7, "bottom left corner": 7, "7": 7,
-                            "bottom middle": 8, "middle bottom": 8, "8": 8,
-                            "bottom right": 9, "bottom right corner": 9, "9": 9,
+                            "top left": 1, "top left corner" : 1, "1":1, 1:1,
+                            "top middle": 2, "middle top": 2, "2": 2, 2:2,
+                            "top right": 3, "top right corner": 3, "3": 3, 3:3,
+                            "left middle": 4, "middle left": 4, "4": 4, 4:4,
+                            "middle": 5, "mid": 5, "middle middle": 5,"5": 5, 5:5,
+                            "right middle": 6, "middle right": 6, "6": 6, 6:6,
+                            "bottom left": 7, "bottom left corner": 7, "7": 7, 7:7,
+                            "bottom middle": 8, "middle bottom": 8, "8": 8, 8:8,
+                            "bottom right": 9, "bottom right corner": 9, "9": 9, 9:9,
                             '' : None,
         }
 
@@ -34,7 +34,6 @@ class Game():
         Firt checks horizontal rows, then vertical columns, and finally the two diagonals
         :return: True if 'three-in-a-row' of a sign is found, False otherwise
         """
-
         # Check Horizontal Rows
         for i in [1, 4, 7]:
             if(self.game_board[i] != '-' and
@@ -69,8 +68,6 @@ class Game():
         if self._validate_move(pos):
             if self.game_board[self.valid_moves[pos]] == '-':
                 self.game_board[self.valid_moves[pos]] = sign
-                print(self)
-                print()
                 return True
         return False
 
@@ -81,9 +78,10 @@ class Game():
         :param move: String move
         :return: True if the move is in the dict and the space is open
         """
-        if ((move.lower() in self.valid_moves.keys()) and
-            (self.game_board[self.valid_moves[move.lower()]] == '-')):
-                return True
+        #temporarily taking out move.lower()
+        if ((move in self.valid_moves.keys()) and
+            (self.game_board[self.valid_moves[move]] == '-')):
+            return True
         return False
 
     def play(self, player1, player2):
@@ -93,7 +91,7 @@ class Game():
             while (p1move == "" or (not player1.game.move(player1.sign, p1move))):
                 p1move = input("Player 1 turn: ")
             player1.move(p1move)
-            if player1.game.check_for_win():
+            if self.check_for_win():
                 print("Player 1 wins!")
                 return player1
 
@@ -101,7 +99,7 @@ class Game():
             while (p2move == "" or (not player2.game.move(player2.sign, p2move))):
                 p2move = input("Player 2 turn: ")
             player2.move(p2move)
-            if player1.game.check_for_win():
+            if self.check_for_win():
                 print("Player 2 wins!")
                 return player2
 
@@ -110,7 +108,7 @@ class Game():
         i = 0
         while not self.check_for_win():
             player1.move(p1moves[i])
-            if player1.game.check_for_win():
+            if self.check_for_win():
                 print("Player 1 wins!")
                 return player1
 
@@ -118,11 +116,33 @@ class Game():
                 return None
 
             player2.move(p2moves[i])
-            if player1.game.check_for_win():
+            if self.check_for_win():
                 print("Player 2 wins!")
                 return player2
 
             i += 1
+
+    def play_comp_test(self, comp1, player2, p2moves):
+        print("Let's play tic-tac-toe! I'm Os, you're Xs!")
+        i = 0
+        while not self.check_for_win():
+            comp1.auto_move()
+
+            if self.check_for_win():
+                print("Player 1 wins!")
+                return comp1
+
+            if i == 4:
+                return None
+
+            player2.move(p2moves[i])
+            if self.check_for_win():
+                print("Player 2 wins!")
+                return player2
+
+            i += 1
+
+
 
 
 
@@ -134,8 +154,64 @@ class Player():
         self.sign = sign
         self.game = game
 
+    def taken(self, index):
+        if self.game.game_board[index] == self.sign:
+            return True
+        return False
+
+    def playable(self, index):
+        if self.game.game_board[index] == '-':
+            return True
+        return False
+
     def move(self, pos):
         return self.game.move(self.sign, pos)
 
+
+class Computer(Player):
+
+    def auto_move(self):
+        print("beginning auto move")
+        self.first_win()
+
+    def _get_three(self, indices):
+        """
+        Finds the playable space in 'indicies'. Always called after
+        _oneplay_twotaken
+        :param indices: 3 indicies in the game_board, representing a row,
+                        column, or diagonal
+        :return: The index that is playable
+        """
+        for i in indices:
+            if self.playable(i):
+                return i
+
+    def _oneplay_twotaken(self, indices):
+        """
+        Checks if it is possible to get 'three-in-a-row' in this group
+        :param indices: 3 indicies in the game_board, representing a row,
+                        column, or diagonal
+        :return: True if there are two spaces taken by the computer and
+                one that is open, False otherwise
+        """
+        playble = 0
+        taken = 0
+        for i in indices:
+            if self.playable(i):
+                playble +=1
+            if self.taken(i):
+                taken +=1
+        return (playble, taken) == (1,2)
+
+    def first_win(self):
+
+        for combo in [  [1,2,3], [4,5,6], [7,8,9],
+                        [1,4,7], [2,5,8], [3,6,9],
+                        [1,5,9], [3,5,7]]:
+            if self._oneplay_twotaken(combo):
+                self.move(self._get_three(combo))
+                return True
+
+        return False
 
 

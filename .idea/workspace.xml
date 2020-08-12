@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ae1636d-00f0-4aa3-abd8-6b76b0c1d38a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe.py" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_test.py" afterDir="false" />
     </list>
@@ -16,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TicTacToe.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="116" column="21" lean-forward="true" selection-start-line="116" selection-start-column="21" selection-end-line="116" selection-end-column="21" />
+            <state relative-caret-position="138">
+              <caret line="211" column="49" selection-start-line="211" selection-start-column="49" selection-end-line="211" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -25,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+            <state relative-caret-position="-126">
+              <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -63,7 +64,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1685" />
+    <option name="x" value="-15" />
+    <option name="y" value="-15" />
     <option name="width" value="2175" />
     <option name="height" value="2080" />
   </component>
@@ -159,34 +161,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.11 at 19h 13m 18s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 12m 17s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.11 at 19h 14m 17s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 48m 46s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.11 at 19h 14m 41s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 50m 16s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.11 at 19h 15m 25s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 50m 37s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.11 at 19h 16m 14s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 51m 28s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.11 at 19h 34m 30s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 52m 08s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.11 at 19h 37m 22s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 52m 51s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.11 at 19h 37m 29s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 54m 08s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.11 at 19h 40m 45s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 55m 09s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.11 at 19h 41m 43s.xml">
+    <history-entry file="Unittests_for_game_test_MyTestCase - 2020.08.12 at 13h 56m 52s.xml">
       <configuration name="Unittests for game_test.MyTestCase" configurationId="tests" />
     </history-entry>
   </component>
@@ -198,7 +200,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42739725" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -216,15 +218,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/TicTacToe.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="116" column="21" lean-forward="true" selection-start-line="116" selection-start-column="21" selection-end-line="116" selection-end-column="21" />
+        <state relative-caret-position="138">
+          <caret line="211" column="49" selection-start-line="211" selection-start-column="49" selection-end-line="211" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+        <state relative-caret-position="-126">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
