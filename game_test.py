@@ -133,5 +133,65 @@ class CvPTestCase(unittest.TestCase):
                          game1.game_board
                          )
 
+    def test_center_nonempty(self):
+        game1, computer1, player2 = self.onecompplayer_setup()
+        game1.game_board = {1: "O", 2: "-", 3: "-",
+                            4: "X", 5: "-", 6: "O",
+                            7: "X", 8: "-", 9: "-"}
+        computer1.auto_move()
+        self.assertEqual({1: "O", 2: "-", 3: "-",
+                          4: "X", 5: "X", 6: "O",
+                          7: "X", 8: "-", 9: "-"},
+                         game1.game_board
+                         )
+
+    def test_oppcorner7(self):
+        game1, computer1, player2 = self.onecompplayer_setup()
+        game1.game_board = {1: "-", 2: "-", 3: "O",
+                            4: "-", 5: "X", 6: "-",
+                            7: "-", 8: "-", 9: "-"}
+        computer1.auto_move()
+        self.assertEqual({1: "-", 2: "-", 3: "O",
+                          4: "-", 5: "X", 6: "-",
+                          7: "X", 8: "-", 9: "-"},
+                         game1.game_board
+                         )
+
+    def test_oppcorner1(self):
+        game1, computer1, player2 = self.onecompplayer_setup()
+        game1.game_board = {1: "-", 2: "-", 3: "-",
+                            4: "O", 5: "X", 6: "X",
+                            7: "-", 8: "-", 9: "O"}
+        computer1.auto_move()
+        self.assertEqual({1: "X", 2: "-", 3: "-",
+                          4: "O", 5: "X", 6: "X",
+                          7: "-", 8: "-", 9: "O"},
+                         game1.game_board
+                         )
+
+    def test_oppcorner3(self):
+        game1, computer1, player2 = self.onecompplayer_setup()
+        game1.game_board = {1: "-", 2: "-", 3: "-",
+                            4: "-", 5: "X", 6: "-",
+                            7: "O", 8: "-", 9: "-"}
+        computer1.auto_move()
+        self.assertEqual({1: "-", 2: "-", 3: "X",
+                          4: "-", 5: "X", 6: "-",
+                          7: "O", 8: "-", 9: "-"},
+                         game1.game_board
+                         )
+
+    def test_oppcorner9(self):
+        game1, computer1, player2 = self.onecompplayer_setup()
+        game1.game_board = {1: "O", 2: "-", 3: "-",
+                            4: "-", 5: "X", 6: "-",
+                            7: "-", 8: "-", 9: "-"}
+        computer1.auto_move()
+        self.assertEqual({1: "O", 2: "-", 3: "-",
+                          4: "-", 5: "X", 6: "-",
+                          7: "-", 8: "-", 9: "X"},
+                         game1.game_board
+                         )
+
 if __name__ == '__main__':
     unittest.main()

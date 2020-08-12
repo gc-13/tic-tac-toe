@@ -173,7 +173,7 @@ class Computer(Player):
     def auto_move(self):
         print("beginning auto move")
         moved = False
-        moves = [self.first_win, self.second_block, self.fifth_center,]
+        moves = [self.first_win, self.second_block, self.fifth_center, self.sixth_oppcorner]
         for i in range(len(moves)):
             moved = moves[i]()
             if moved:
@@ -220,15 +220,15 @@ class Computer(Player):
         return False
 
     def second_block(self):
-        sign = ''
         if self.sign == 'X':
-            sign = 'O'
+            oppsign = 'O'
         else:
-            sign = 'X'
+            oppsign = 'X'
+
         for combo in [  [1,2,3], [4,5,6], [7,8,9],
                         [1,4,7], [2,5,8], [3,6,9],
                         [1,5,9], [3,5,7]]:
-            if self._oneplay_twotaken(sign, combo):
+            if self._oneplay_twotaken(oppsign, combo):
                 print(self._get_three(combo))
                 self.move(self._get_three(combo))
                 print(self.game.check_for_win())
@@ -243,6 +243,30 @@ class Computer(Player):
             self.move(5)
             return True
         return False
+
+    def sixth_oppcorner(self):
+        if self.sign == 'X':
+            oppsign = 'O'
+        else:
+            oppsign = 'X'
+
+        if self.taken(oppsign, 1) and self.playable(9):
+            self.move(9)
+            return True
+        elif self.taken(oppsign, 9) and self.playable(1):
+            self.move(1)
+            return True
+        elif self.taken(oppsign, 3) and self.playable(7):
+            self.move(7)
+            return True
+        elif self.taken(oppsign, 7) and self.playable(3):
+            self.move(3)
+            return True
+        else:
+            return False
+
+
+
 
 
 
