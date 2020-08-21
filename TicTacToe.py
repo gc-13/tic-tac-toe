@@ -58,6 +58,7 @@ class Game():
 
     def move(self, sign, pos):
         """
+        Places the sign at the position on the gameboard
 
         :param sign: Sign (X or O) to be placed
         :param pos: String Position of where to place the sign
@@ -85,7 +86,20 @@ class Game():
         return False
 
     def play(self, player1, player2):
+        """
+        Actual playing of the game!
+        In a loop, checks for a win after each player move and keeps
+        going until we have a winner. For each player move, it will
+        attempt to move or keep going until the Player enters a valid
+        move. Finally, if all spaces have been taken and there is no
+        winner (a draw), it will print "Draw" and return None
+
+        :param player1: Player 1
+        :param player2: Player 2
+        :return: The winning Player object, or None if it is a draw
+        """
         print("Let's play tic-tac-toe! I'm Os, you're Xs!")
+        i = 0
         while not self.check_for_win():
             p1move = ""
             while (p1move == "" or (not player1.game.move(player1.sign, p1move))):
@@ -95,6 +109,10 @@ class Game():
                 print("Player 1 wins!")
                 return player1
 
+            if i == 4:
+                print("Draw")
+                return None
+
             p2move = ""
             while (p2move == "" or (not player2.game.move(player2.sign, p2move))):
                 p2move = input("Player 2 turn: ")
@@ -103,7 +121,18 @@ class Game():
                 print("Player 2 wins!")
                 return player2
 
+            i += 1
+
     def play_test(self, player1, player2, p1moves, p2moves):
+        """
+        Plays the game following two lists of predetermined player moves
+
+        :param player1: Player 1
+        :param player2: Player 2
+        :param p1moves: List of player 1 moves
+        :param p2moves: list of player 2 moves
+        :return: The winning Player
+        """
         print("Let's play tic-tac-toe! I'm Os, you're Xs!")
         i = 0
         while not self.check_for_win():
@@ -123,6 +152,15 @@ class Game():
             i += 1
 
     def play_comp_test(self, comp1, player2, p2moves):
+        """
+        Plays the game with the Computer following its own strategy and
+        a Player following a list of predetermined moves
+
+        :param comp1: Computer
+        :param player2: Player
+        :param p2moves: list of player moves
+        :return: The winning Computer or Player
+        """
         print("Let's play tic-tac-toe! I'm Os, you're Xs!")
         i = 0
         while not self.check_for_win():
@@ -270,3 +308,7 @@ class Computer(Player):
 
 
 
+# game1 = Game()
+# player1 = Player('X', game1)
+# player2 = Player('O', game1)
+# game1.play(player1, player2)
